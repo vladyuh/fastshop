@@ -1,0 +1,44 @@
+section.homepage-block.homepage-services
+  .container
+    .section-h2.homepage-block__title.homepage-services__title Наши услуги
+    .homepage-services__items
+      -
+        var services = [
+          {
+            image: "img/common/services/01",
+            caption: "Помощь в поиске"
+          },
+          {
+            image: "img/common/services/02",
+            caption: "Проверка продавцов"
+          },
+          {
+            image: "img/common/services/03",
+            caption: "Полный возврат VAT 23%"
+          },
+          {
+            image: "img/common/services/04",
+            caption: "Доставка товаров без фактуры VAT"
+          },
+          {
+            image: "img/common/services/05",
+            caption: "Покупка товаров с любых торговых площадок, интернет-магазинов или аукционов"
+          },
+          {
+            image: "img/common/services/06",
+            caption: "Принятие и хранение покупок у нас на складе"
+          },
+          {
+            image: "img/common/services/07",
+            caption: 'Услугу "склад", виртуальный адрес в Польше для самостоятельного заказа товара на наш склад'
+          },
+          {
+            image: "img/common/services/08",
+            caption: "Объединение ваших покупок от разных продавцов менее 200 ZŁ на TAX FREE"
+          },
+        ]
+
+      each item in services
+        .homepage-services__item
+          .homepage-services__item-icon: img.lazyload(loading="lazy" data-src=item.image+".svg" width=48 height=48)
+          .homepage-services__item-caption=item.caption

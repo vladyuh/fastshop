@@ -1,0 +1,31 @@
+@import "helpers/variables";
+@import "helpers/mixins";
+@import "helpers/functions";
+@import "vendor/libs";
+@import "base/fonts";
+@import "base/general";
+@import "../blocks/components/components";
+@import "../blocks/modules/modules";
+
+.splide {
+  position: relative;
+
+  &__arrow {
+    border: none;
+    width: 52px;
+    height: 52px;
+    background: #f2f5fa;
+    border-radius: 26px;
+    background-size: 8px;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &--prev {
+      background-image: url(../img/svg/arrow-left.svg);
+    }
+
+    &--next {
+      background-image: url(../img/svg/arrow-right.svg);
+    }
+  }
+}

@@ -1,0 +1,33 @@
+.homepage-banner {
+  padding: 24px 0 14px;
+  background: #f2f5fa;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+    text-align: center;
+  }
+
+  &__title {
+    margin-bottom: 8px;
+    color: #0070e0;
+  }
+
+  &__caption {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 156%;
+    color: #16233d;
+    margin-bottom: 20px;
+  }
+
+  &__image {
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}

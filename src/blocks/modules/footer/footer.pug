@@ -1,0 +1,37 @@
+footer.footer
+    .footer-top
+        .container
+            .footer__infos.footer__phones
+                .footer__info
+                    .footer__info-icon: +icons('#icon_phone_small', 28)
+                    .footer__info-caption Телефон в Беларуси
+                    a(href="tel:+375 (29) 244-44-44").footer__info-value +375 (29) 244-44-44
+                .footer__info
+                    .footer__info-icon: +icons('#icon_phone_small', 28)
+                    .footer__info-caption Телефон в Польше
+                    a(href="tel:+48 123 456 789").footer__info-value +48 123 456 789
+            .footer__socials
+                a(href="#").footer__social
+                    +icons('#icon_viber', 36)
+                    span.footer__social-caption.violet Viber
+                a(href="#").footer__social
+                    +icons('#icon_telegram', 36)
+                    span.footer__social-caption.blue Telegram
+            .footer__infos.footer__information
+                .footer__info
+                    .footer__info-icon: +icons('#at-sign', 28)
+                    .footer__info-caption E-mail
+                    a(href="mailto:contact.fastshop@yandex.ru").footer__info-value contact.fastshop@yandex.ru
+                    .footer__info-additional ПН-ПТ: 08:00 – 17:00
+                .footer__info.fullwidth
+                    .footer__info-icon: +icons('#map-pin', 28)
+                    .footer__info-caption Наш склад
+                    .footer__info-value Польша, г. Белосток, ул. Кавалерийская 58а, 15-325
+                    .footer__info-additional ПН-ПТ: 08:00 – 17:00
+    .footer-bottom
+        .container
+            .footer-bottom__copy © FastShop, 2022
+            a(href="#").footer-bottom__agreement Пользовательское соглашение
+            .footer-bottom__dev
+                .footer-bottom__dev-caption Разработка и поддержка
+                .footer-bottom__dev-image: img.lazyload(data-src="img/dev.svg" loading="lazy" width=208 height=20)

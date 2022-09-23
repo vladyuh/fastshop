@@ -1,0 +1,43 @@
+section.homepage-block.homepage-calculate
+  .homepage-calculate__top
+    .container
+      .section-h2.homepage-block__title.homepage-calculate__title Расчет стоимости
+  .homepage-calculate__bottom
+    .container
+      form.homepage-calculate__form
+        .homepage-calculate__form-caption.section-h4 Калькулятор
+        .form__fields
+          .form__field
+            +input({
+              type: "number",
+              label: "Стоимость",
+              name: "price",
+              placeholder: "300"
+            })
+          .form__field
+            +select({
+              label: "VAT, %",
+              name: "vat",
+              data: ["Выберите","23%","30%"]
+            })
+          .form__field
+            +select({
+              label: "Комиссия FastShop",
+              name: "commision",
+              data: ["Выберите","8%","10%"]
+            })
+        .form__submit
+          button.btn.btn-primary(type="submit") Рассчитать
+        .form__results
+          .form__result
+            .form__result-value 25.00
+            .form__result-caption zł, комиссия
+          .form__result
+            .form__result-value 325.00
+            .form__result-caption zł, к оплате в Польше
+          .form__result
+            .form__result-value 60.77
+            .form__result-caption zł, VAT к возврату
+          .form__result
+            .form__result-value 264.23
+            .form__result-caption zł, конечная стоимость покупки

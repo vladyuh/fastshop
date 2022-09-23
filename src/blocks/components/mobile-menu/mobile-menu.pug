@@ -1,0 +1,56 @@
+include ../../components/burger/burger
+.mobilemenu
+    .container
+        nav.mobilemenu-nav
+            ul.mobilemenu-nav__list
+                -
+                    var nav = [
+                        {
+                            name: "Услуги",
+                            link: "#services"
+                        },
+                        {
+                            name: "Цены",
+                            link: "#prices"
+                        },
+                        {
+                            name: "Как мы работаем",
+                            link: "#work"
+                        },
+                        {
+                            name: "Преимущества",
+                            link: "#advantages"
+                        },
+                        {
+                            name: "Отзывы",
+                            link: "#reviews"
+                        }
+                    ]
+
+                each item in nav
+                    li.mobilemenu-nav__item
+                        a(href=item.link).mobilemenu-nav__link=item.name
+        .mobilemenu-info
+            .mobilemenu-info__caption Наши контакты
+            .mobilemenu__phones
+                .mobilemenu__phone
+                    .mobilemenu__phone-icon
+                        picture
+                            source(srcset="img/common/belarus.webp" type="image/webp")
+                            img(src="img/common/belarus.png" width=24 height=15)
+                    .mobilemenu__phone-caption Телефон в Беларуси
+                    a(href="tel:+375 (29) 244-44-44").mobilemenu__phone-link +375 (29) 244-44-44
+                .mobilemenu__phone
+                    .mobilemenu__phone-icon
+                        picture
+                            source(srcset="img/common/poland.webp" type="image/webp")
+                            img(src="img/common/poland.png" width=24 height=15)
+                    .mobilemenu__phone-caption Телефон в Польше
+                    a(href="tel:+48 123 456 789").mobilemenu__phone-link +48 123 456 789
+            .mobilemenu__socials
+              a(href="#").mobilemenu__social
+                +icons('#icon_viber', 36)
+                span.mobilemenu__social-caption.violet Viber
+              a(href="#").mobilemenu__social
+                +icons('#icon_telegram', 36)
+                span.mobilemenu__social-caption.blue Telegram

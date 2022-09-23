@@ -1,0 +1,95 @@
+include ../../components/burger/burger
+header.header
+    .header-top
+        .container
+            .header__phones
+                .header__phone
+                    .header__phone-icon
+                        picture
+                            source(srcset="img/common/belarus.webp" type="image/webp")
+                            img(src="img/common/belarus.png" width=24 height=15)
+                    .header__phone-caption Телефон в Беларуси
+                    a(href="tel:+375 (29) 244-44-44").header__phone-link +375 (29) 244-44-44
+                .header__phone
+                    .header__phone-icon
+                        picture
+                            source(srcset="img/common/poland.webp" type="image/webp")
+                            img(src="img/common/poland.png" width=24 height=15)
+                    .header__phone-caption Телефон в Польше
+                    a(href="tel:+48 123 456 789").header__phone-link +48 123 456 789
+            .header__socials
+                a(href="#").header__social: +icons('#icon_viber', 36)
+                a(href="#").header__social: +icons('#icon_telegram', 36)
+            .header-top__personal
+                .header-top__personal-icon: +icons('#icon_user', 14)
+                .header-top__personal-content
+                    .header-top__personal-caption Личный кабинет
+                    .header-top__personal-links
+                        a(href="#").header-top__personal-link Вход
+                        a(href="#").header-top__personal-link Регистрация
+    .header-bottom
+        .container
+            .header-bottom__burger
+                +burger
+            .header-bottom__logo
+                .header-bottom__logo-image: img(src="img/logo.svg" height=48 width=48)
+                .header-bottom__logo-text
+                    .header-bottom__logo-name FastShop
+                    .header-bottom__logo-caption Доставка товаров из Польши в Беларусь
+            nav.header-bottom__nav
+                ul.header-bottom__nav-list
+                    -
+                        var nav = [
+                            {
+                                name: "Услуги",
+                                link: "#services"
+                            },
+                            {
+                                name: "Цены",
+                                link: "#prices"
+                            },
+                            {
+                                name: "Как мы работаем",
+                                link: "#work"
+                            },
+                            {
+                                name: "Преимущества",
+                                link: "#advantages"
+                            },
+                            {
+                                name: "Отзывы",
+                                link: "#reviews"
+                            }
+                        ]
+
+                    each item in nav
+                        li.header-bottom__nav-item
+                            a(href=item.link).header-bottom__nav-link=item.name
+            .header-bottom__phone
+                .header-bottom__phone-link: +icons('#icon_phone', 32)
+                .header-bottom__phone-close: +icons("#icon_close_32", 32)
+                .header-bottom__phone-menu
+                    .header__phones
+                        .header__phone
+                            .header__phone-icon
+                                picture
+                                    source(srcset="img/common/belarus.webp" type="image/webp")
+                                    img(src="img/common/belarus.png" width=24 height=15)
+                            .header__phone-caption Телефон в Беларуси
+                            a(href="tel:+375 (29) 244-44-44").header__phone-link +375 (29) 244-44-44
+                        .header__phone
+                            .header__phone-icon
+                                picture
+                                    source(srcset="img/common/poland.webp" type="image/webp")
+                                    img(src="img/common/poland.png" width=24 height=15)
+                            .header__phone-caption Телефон в Польше
+                            a(href="tel:+48 123 456 789").header__phone-link +48 123 456 789
+                    .header__socials
+                        a(href="#").header__social
+                            +icons('#icon_viber', 36)
+                            span.header__social-caption.violet Viber
+                        a(href="#").header__social
+                            +icons('#icon_telegram', 36)
+                            span.header__social-caption.blue Telegram
+            .header-bottom__personal
+                a(href="#").header-bottom__personal-link: +icons("#icon_personal", 32)

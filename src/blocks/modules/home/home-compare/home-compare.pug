@@ -1,0 +1,24 @@
+section.homepage-block.homepage-compare
+  .container
+    .section-h2.homepage-block__title.homepage-compare__title Сравните цены
+    .homepage-compare__slider.splide
+      .splide__track
+        ul.splide__list
+          li.splide__slide.homepage-compare__slide
+            .homepage-compare__slide-image
+              picture
+                source(srcset="img/common/product-1.webp" type="image/webp")
+                img(src="img/common/product-1.png" width=224 height=224)
+            .homepage-compare__slide-content
+              .homepage-compare__slide-name Смартфон Apple<br>iPhone 13
+              .homepage-compare__slide-prices
+                .homepage-compare__slide-price.right-align
+                  .caption Цена в Беларуси
+                  .value 960$
+                .homepage-compare__slide-divider
+                .homepage-compare__slide-price.left-align
+                  .caption Цена в Польше
+                  .value 850$
+      .splide__arrows.homepage-compare__arrows
+        button.splide__arrow.splide__arrow--prev
+        button.splide__arrow.splide__arrow--next
